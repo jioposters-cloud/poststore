@@ -10,6 +10,8 @@ export interface Product {
   size: string;
   inStock: boolean;
   featured?: boolean;
+  sku?: string;
+  stock?: number;
 }
 
 export interface CartItem extends Product {

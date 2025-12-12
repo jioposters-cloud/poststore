@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Trash2, Plus, Minus, ShoppingBag, ArrowRight } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -6,16 +6,13 @@ import { useCart } from '@/contexts/CartContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { toast } from '@/hooks/use-toast';
 
 const Cart = () => {
+  const navigate = useNavigate();
   const { items, removeFromCart, updateQuantity, totalPrice, clearCart } = useCart();
 
   const handleCheckout = () => {
-    toast({
-      title: 'Razorpay Integration Pending',
-      description: 'Payment gateway is in approval stage. Please contact us via WhatsApp to complete your order.',
-    });
+    navigate('/checkout');
   };
 
   if (items.length === 0) {
