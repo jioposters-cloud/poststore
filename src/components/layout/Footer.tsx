@@ -18,14 +18,13 @@ const footerLinks = {
   ],
   support: [
     { name: 'Contact Us', href: '/contact' },
-    { name: 'FAQs', href: '/faq' },
-    { name: 'Shipping Info', href: '/shipping' },
-    { name: 'Returns', href: '/returns' },
+    { name: 'Shipping Policy', href: '/shipping' },
+    { name: 'Returns & Refunds', href: '/returns' },
   ],
   company: [
     { name: 'About Us', href: '/about' },
     { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Terms & Conditions', href: '/terms' },
   ],
 };
 
